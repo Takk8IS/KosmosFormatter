@@ -46,7 +46,7 @@ export function formatAdaCode(code: string): string {
       formattedLines.push(indent + line);
 
       if (line.match(/^end\s+/i)) {
-        insideFunction = false;
+        insideProcedure = false;
         if (i < lines.length - 1 && lines[i + 1].trim()) {
           formattedLines.push('');
         }
